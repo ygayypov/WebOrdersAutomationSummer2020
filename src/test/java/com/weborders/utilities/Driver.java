@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.io.FileInputStream;
+import java.util.Properties;
+
 public class Driver {
     //reference variable, pointer on object
     //if reference variable doesn't point on any object it will have a null value\
@@ -21,6 +24,10 @@ public class Driver {
 
     public static WebDriver getDriver() {
         if (driver == null) {
+            //Properties properties = new Properties();
+            //properties.load(new FileInputStream("configuration.properties"));
+            //String brower = "configuration.properties";
+
             String browser = "chrome";
             switch (browser) {
                 case "chrome":
@@ -38,3 +45,4 @@ public class Driver {
         return driver;
     }
 }
+
