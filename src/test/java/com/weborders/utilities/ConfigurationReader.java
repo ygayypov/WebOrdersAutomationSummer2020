@@ -1,6 +1,7 @@
 package com.weborders.utilities;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
@@ -21,5 +22,9 @@ public class ConfigurationReader {
 
     public static String getProperty(String key) {
         return properties.getProperty(key);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("browser");
     }
 }

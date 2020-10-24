@@ -26,9 +26,9 @@ public class Driver {
         if (driver == null) {
             //Properties properties = new Properties();
             //properties.load(new FileInputStream("configuration.properties"));
-            //String brower = "configuration.properties";
+            //String browser = "configuration.properties";
 
-            String browser = "chrome";
+            String browser = ConfigurationReader.getProperty("browser");
             switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
